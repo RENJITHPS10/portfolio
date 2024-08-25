@@ -1,0 +1,520 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-padding-top: 65px;
+    /* Adjust this value to match the height of your fixed header */
+
+}
+
+
+/* header */
+header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+
+}
+
+header ul a {
+    position: relative;
+
+}
+
+ul a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 5px;
+    width: 0;
+    background-color: blue;
+    transition: width 0.3s ease;
+}
+
+.navbar-toggler span {
+    color: blue;
+}
+
+ul a:hover::after {
+    width: 100%;
+}
+
+
+
+/* home */
+
+#home {
+    background-image: linear-gradient(to bottom right,
+            rgb(0, 0, 0),
+            /* Black */
+            rgb(10, 10, 50),
+            /* Dark Blue */
+            rgb(20, 20, 80),
+            /* Darker Blue */
+            rgb(30, 30, 110)
+            /* Even Darker Blue */
+        );
+
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+#home h1 {
+
+    font-size: 50px;
+    padding-left: 31%;
+
+}
+
+#home .hi {
+    padding-left: 25%;
+}
+
+#home .resume {
+    border-radius: 10px;
+    margin-left: 46%;
+    padding: 10px;
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+#home .resume:hover {
+    background-color: #007bff;
+}
+
+#home .text {
+
+    font-size: 80px;
+    animation: glitch 3s infinite;
+}
+
+/* Keyframes for glitch effect */
+@keyframes glitch {
+    0% {
+        text-shadow: 5px 5px rgba(255, 0, 0, 0.75), -5px -5px rgba(0, 255, 255, 0.75);
+        transform: translate(5px, 5px);
+    }
+
+    10% {
+        text-shadow: -5px -5px rgba(255, 0, 0, 0.75), 5px 5px rgba(0, 255, 255, 0.75);
+        transform: translate(-5px, -5px);
+    }
+
+    20% {
+        text-shadow: 5px 5px rgba(0, 255, 0, 0.75), -5px -5px rgba(255, 0, 255, 0.75);
+        transform: translate(5px, -5px);
+    }
+
+    30% {
+        text-shadow: -5px -5px rgba(0, 255, 0, 0.75), 5px 5px rgba(255, 0, 255, 0.75);
+        transform: translate(-5px, 5px);
+    }
+
+    40%,
+    100% {
+        text-shadow: none;
+        transform: translate(0, 0);
+    }
+}
+
+
+
+/* about */
+#about {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+#about h1 {
+    padding: 2% 0% 5% 0%;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#about .profile img {
+    margin: 0% 0 5% 0%;
+    border-radius: 10%;
+    width: 90%;
+}
+
+#about .aboutme {
+    margin: 0% 5% 0 5%;
+    font-size: 22px;
+}
+
+/* education */
+#education {
+    background-image: linear-gradient(to bottom right,
+            rgb(0, 0, 0),
+            /* Black */
+            rgb(10, 10, 50),
+            /* Dark Blue */
+            rgb(20, 20, 80),
+            /* Darker Blue */
+            rgb(30, 30, 110)
+            /* Even Darker Blue */
+        );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#education .box {
+    background: linear-gradient(to right, #003366, #004080, #002a6d, #001f3f);
+
+
+    width: 100%;
+    height: 10rem;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30%;
+
+}
+
+#education h1 {
+    padding: 2% 0% 5% 0%;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#education .box1 {
+    background: linear-gradient(to right, #003366, #00509e, #002b45, #1e1e1e);
+
+    width: 10%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#education .box1 p {
+    text-align: center;
+    padding-top: 30%;
+    font-size: 20px;
+}
+
+#education .box img {
+    margin: 30px 0px 0 70px;
+}
+
+#education .educontent {
+    display: flex;
+    align-items: center;
+}
+
+#education .educontent p {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+/* projects */
+#projects {
+    background-color: black;
+
+
+}
+
+#projects h1 {
+    padding: 2% 0% 5% 0%;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+
+}
+
+#projects .html {
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+
+}
+
+#projects span {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+
+}
+
+#projects .card {
+    background: linear-gradient(to right, #003366, #004080, #002a6d, #001f3f);
+
+}
+
+#projects .btnspace {
+    margin-top: 88px;
+}
+
+/* skills */
+
+#skills {
+    background-image: linear-gradient(to bottom right,
+            rgb(0, 0, 0),
+            /* Black */
+            rgb(10, 10, 50),
+            /* Dark Blue */
+            rgb(20, 20, 80),
+            /* Darker Blue */
+            rgb(30, 30, 110)
+            /* Even Darker Blue */
+        );
+
+}
+
+#skills h1 {
+    padding: 2% 0% 5% 0%;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+#skills .skills-section {
+    padding-bottom: 8%;
+}
+
+#skills .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#skills .skill-card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills .skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#skills .skill-card img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+#skills .skill-card:hover img {
+    opacity: 0.8;
+}
+
+#skills .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-color: #007bff;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+#skills .skill-card:hover::before {
+    opacity: 0.3;
+}
+
+#contact {
+
+    overflow: hidden;
+    color: white;
+
+}
+
+#contact h1 {
+    padding: 2% 0% 5% 0%;
+    font-size: 40px;
+    font-weight: 800;
+
+
+}
+
+#contact .links {
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#contact .links i {
+    color: white;
+    padding-right: 1.5rem;
+    transition: padding-right 0.3s ease;
+}
+
+#contact .links:hover i {
+    padding-right: 2rem;
+}
+
+
+#contact .share a {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    color: rgb(0, 0, 0);
+    margin-right: 0.2rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+}
+
+#contact .share .github:hover {
+    background-color: black;
+    color: white;
+}
+
+#contact .share .linkedin:hover {
+    background-color: rgb(10, 102, 194);
+    color: white;
+}
+
+#contact .share .instagram:hover {
+    background: linear-gradient(45deg, #8a3ab9, #fd1d1d, #fcb045, #feda75);
+    color: white;
+}
+
+#contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact .contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact .contact-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+
+
+
+/* mobile responsive */
+@media (max-width:400px) {
+    .navbar-collapse {
+        margin-left: -20px;
+    }
+
+    ul a:hover::after {
+        width: 0;
+    }
+
+    #home h1 {
+        font-size: 30px;
+        padding: 30% 0% 0% 5%;
+    }
+
+    #home .hi {
+        font-size: 30px;
+        padding-left: 43%;
+
+    }
+
+    #home .text {
+        font-size: 40px;
+        padding-left: 5%;
+    }
+
+    #home .resume {
+        margin-left: 34%;
+    }
+
+    #about h1 {
+        padding: 10% 0 3% 1%;
+        font-weight: 600;
+    }
+
+    #about .profile img {
+        width: 100%;
+    }
+
+    #about .aboutme {
+        margin: 2rem 0;
+        font-size: 20px;
+
+    }
+
+    #education .box {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    #education .box img {
+        margin: 35px 0px 0px 50px;
+    }
+
+    #education .educontent p {
+        margin: 30px 0px 0px 10px;
+    }
+
+    footer h4 {
+        font-size: 16px;
+
+    }
+
+
+}
