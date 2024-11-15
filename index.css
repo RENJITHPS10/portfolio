@@ -34,7 +34,7 @@ ul a::after {
     position: absolute;
     left: 0;
     bottom: 0px;
-    height: 5px;
+    height: 2px;
     width: 0;
     background-color: blue;
     transition: width 0.3s ease;
@@ -351,11 +351,7 @@ ul a:hover::after {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-    #skills .skills-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
-    }
-}
+
 
 @media screen and (max-width: 768px) {
     #skills .skills-grid {
