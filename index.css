@@ -269,35 +269,36 @@ ul a:hover::after {
 /* skills */
 
 #skills {
-    background-image: linear-gradient(to bottom right,
-            rgb(0, 0, 0),
-            /* Black */
-            rgb(10, 10, 50),
-            /* Dark Blue */
-            rgb(20, 20, 80),
-            /* Darker Blue */
-            rgb(30, 30, 110)
-            /* Even Darker Blue */
-        );
-
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(0, 0, 0),       /* Black */
+        rgb(10, 10, 50),    /* Dark Blue */
+        rgb(20, 20, 80),    /* Darker Blue */
+        rgb(30, 30, 110)    /* Even Darker Blue */
+    );
+    padding: 5% 0; /* Add padding for spacing */
 }
 
 #skills h1 {
-    padding: 2% 0% 5% 0%;
+    padding: 2% 0 5% 0;
     font-size: 40px;
     font-weight: 800;
     color: white;
+    text-align: center;
 }
 
 #skills .skills-section {
     padding-bottom: 8%;
+    max-width: 1200px; /* Centralize content */
+    margin: 0 auto;   /* Align the section to the center */
 }
 
 #skills .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
 }
 
 #skills .skill-card {
@@ -348,6 +349,20 @@ ul a:hover::after {
 #skills .skill-card:hover::before {
     opacity: 0.3;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #skills .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #skills .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for small screens */
+    }
+}
+
 
 #contact {
 
