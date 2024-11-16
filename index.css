@@ -250,12 +250,7 @@ ul a:hover::after {
 
 }
 
-#projects span {
-    padding: 5px;
-    border-radius: 5px;
-    margin: 2px;
 
-}
 
 #projects .card {
     background: linear-gradient(to right, #003366, #004080, #002a6d, #001f3f);
