@@ -133,6 +133,34 @@ ul a:hover::after {
         transform: translate(0, 0);
     }
 }
+.animated-text {
+    overflow: hidden; /* Ensures no overflow beyond the container */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-right: 4px solid #00bcd4; /* Creates the typing cursor effect */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    animation: typing 4s steps(30, end), blink-caret 0.7s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00bcd4;
+    }
+}
 
 
 
